@@ -1,0 +1,61 @@
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.two-column > div {
+  flex: 1 1 0%; /* これで幅を自動調整させやすくする */
+  min-width: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .two-column {
+    flex-direction: column;
+  }
+  .two-column > div {
+    flex: 1 1 100%;
+  }
+}
+
+.two-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.newsrelease-label {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+.newsrelease-meta {
+  text-align: right;
+  margin-bottom: 2em;
+  font-size: 0.9rem;
+}
+
+main h3.newsrelease-title {
+  display: block;
+  text-align: center;
+  border-bottom: none;
+}
+
+.newsrelease-hero {
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.newsrelease-hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner-full {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
