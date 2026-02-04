@@ -633,7 +633,8 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 /*ボタン共通*/
 .btn a,
 .btn-border-radius a {
-	display: block;text-decoration: none;
+	display: block;
+	text-decoration: none;
 	font-size: 1rem;
 	text-align: center;		/*テキストをセンタリング*/
 	background: var(--primary-color) !important;	/*背景色。css冒頭で指定しているprimary-colorを読み込みます*/
@@ -650,7 +651,6 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 
 /*btn-border-radiusの上書き*/
 .btn-border-radius a {
-	display: inline-block;
 	padding: 0.5rem 2rem !important;	/*ボタン内の余白*/
 	border-radius: 100px;	/*角丸の指定。適当に大きければOK。*/
 	background: #e12000 !important;
