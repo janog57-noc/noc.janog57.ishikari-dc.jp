@@ -99,6 +99,21 @@ img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
 /*videoタグ*/
 video {max-width: 100%;}
 
+/*video-container - 16:9 アスペクト比維持*/
+.video-container {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%; /* 9/16 * 100 = 56.25% */
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 /*iframeタグ*/
 iframe {width: 100%;}
 
@@ -615,6 +630,8 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 
 /*ボックス１個あたり*/
 .list-grid1 .list {
+	display: flex;
+  	flex-direction: column;
 	margin-top: 1rem;
 	padding: 1rem;			/*ボックス内の余白*/
 	background: #fff;		/*背景色*/
@@ -627,6 +644,10 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	margin-bottom: 0.5rem;	/*画像の下に空けるスペース*/
 }
 
+
+.list-grid1 .list .btn {
+	margin-top: auto;	/*btnブロックを下に固定する指定*/
+}
 
 /*ボタン（btnと、btn-border-radius）
 ---------------------------------------------------------------------------*/
