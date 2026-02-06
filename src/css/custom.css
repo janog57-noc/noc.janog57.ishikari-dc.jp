@@ -66,11 +66,11 @@ main h3.newsrelease-title {
 	color: var(--primary-color) !important;	/*文字色*/
 }
 
-.btn-soft a {
-	background: #b35246 !important;
+.btn-secondary a {
+	background: #0097ce !important;
 	color: #fff !important;
 }
 
-.btn-soft a:hover {
+.btn-secondary a:hover {
 	filter: brightness(1.1);
 }

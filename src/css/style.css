@@ -655,13 +655,19 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 .btn a,
 .btn-border-radius a {
 	display: block;
+	width: fit-content;
+  	margin: 1rem auto 0;
 	text-decoration: none;
 	font-size: 1rem;
 	text-align: center;		/*テキストをセンタリング*/
 	background: var(--primary-color) !important;	/*背景色。css冒頭で指定しているprimary-colorを読み込みます*/
 	color: var(--primary-inverse-color) !important;	/*文字色。css冒頭で指定しているprimary-inverse-colorを読み込みます*/
-	padding: 0.5rem !important;		/*ボタン内の余白*/
-	margin-top: 1rem !important;
+	padding: 0.5rem 1rem !important;		/*ボタン内の余白*/
+}
+
+.btn-full a {
+	display: block;
+	width: auto;
 }
 
 /*ボタン共通（マウスオン時に少し明るくする）*/
