@@ -28,7 +28,22 @@ description: JANOG57 NOCチームのウェブサイトです
 
                 <p class="btn-border-radius btn-secondary">
                     <a href="https://infalwifi.telhi.jp/portal/j57/" target="_blank" rel="noopener">
-                        プロファイルを取得する
+                        OpenRoaming プロファイルを取得する
+                    </a>
+                </p>
+            </div>
+
+            <!-- Wi-Fi情報（ポリシーに同意すると表示） -->
+            <div id="wifi-section" class="one-column c">
+                <p class="note">WPA2/WPA3 パスワード認証による接続もできます。</p>
+                <p id="wifi-credentials" style="display:none;" aria-hidden="true">
+                    <strong>SSID</strong> JANOG57<br>
+                    <strong>Password</strong> sakura57
+                </p>
+
+                <p class="btn-border-radius btn-secondary">
+                    <a id="show-ssid" style="cursor:pointer;">
+                        ポリシーに同意してSSIDを表示する
                     </a>
                 </p>
             </div>
@@ -99,3 +114,22 @@ description: JANOG57 NOCチームのウェブサイトです
 
 </div>
 <!--/#contents-->
+
+<script>
+(function(){
+        var cred = document.getElementById('wifi-credentials');
+        var btn = document.getElementById('show-ssid');
+        function show(){
+                if(cred){
+                        cred.style.display = 'block';
+                        cred.setAttribute('aria-hidden','false');
+                }
+                if(btn) btn.style.display = 'none';
+        }
+        if(btn){
+                btn.addEventListener('click', function(){
+                        show();
+                });
+        }
+})();
+</script>
