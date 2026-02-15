@@ -569,8 +569,8 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	color: #fff;			/*文字色*/
 }
 
-	/*画面幅700px以上の追加指定*/
-	@media screen and (min-width:700px) {
+/*画面幅700px以上の追加指定*/
+@media screen and (min-width:700px) {
 
 	/*ブロック全体*/
 	.new {
@@ -578,7 +578,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 		grid-template-columns: auto 1fr;	/*横並びの指定。日付とアイコン部分の幅は自動で、内容が入るブロックは残り幅一杯とる。*/
 	}
 
-	}/*追加指定ここまで*/
+}/*追加指定ここまで*/
 
 
 /*list-grid1

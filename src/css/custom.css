@@ -74,3 +74,48 @@ main h3.newsrelease-title {
 .btn-secondary a:hover {
 	filter: brightness(1.1);
 }
+
+
+/* 投稿ブロック
+---------------------------------------------------------------------------*/
+/*記事の下に空ける余白*/
+.posts dd {
+	padding-bottom: 1rem;
+}
+
+/*ブロック内のspan。日付の横のアイコン的な部分の共通設定*/
+.posts dt span {
+	display: inline-block;
+	text-align: center;
+	line-height: 1.8;		/*行間（アイコンの高さ）*/
+	border-radius: 3px;		/*角を丸くする指定*/
+	width: 8rem;			/*幅。６文字分。*/
+	transform: scale(0.8);	/*80%のサイズに縮小*/
+	background: #fff;		/*背景色*/
+	color:#777;				/*文字色*/
+	border: 1px solid #333;
+}
+
+/*icon-bg1*/
+.posts .icon-bg1 {
+	background: #333;	/*背景色*/
+	color: #fff;		/*文字色*/
+}
+
+/*icon-bg2*/
+.posts .icon-bg2 {
+	background: #ff0000;	/*背景色*/
+	color: #fff;			/*文字色*/
+}
+
+/*画面幅700px以上の追加指定*/
+@media screen and (min-width:700px) {
+
+	/*ブロック全体*/
+	.posts {
+		display: grid;	/*gridを使う指定*/
+		grid-template-columns: auto 1fr;	/*横並びの指定。日付とアイコン部分の幅は自動で、内容が入るブロックは残り幅一杯とる。*/
+	}
+
+}/*追加指定ここまで*/
+
